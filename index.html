@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[#FCFCFC]">
+    <!-- header -->
+    <div class="lg:w-[1024px] px-[15px] 2xl:px-0 2xl:w-[1400px] mx-auto">
+        <!-- nav -->
+        <div class="flex justify-between items-center border-b border-[#E1E1E1] relative h-[110px]">
+            <!-- heade icon -->
+            <div>
+                <img class="h-[32px] w-[32px] 2xl:w-[24px] 2xl:h-[24px]" src="./img/header_menu/icon_menu.png" alt="">
+            </div>
+            <!-- logo metropole -->
+            <div class="py-[10px] absolute left-[calc(50%-50px)]">
+                <img src="./img/header_menu/logo_metropole.png" alt="">
+            </div>
+            <!-- nav icons & setting language -->
+            <div class="flex gap-[27px] items-center">
+                <!-- nav icons -->
+                <div class="flex gap-[24px]">
+                    <img class="h-[32px] w-[32px] 2xl:w-[24px] 2xl:h-[24px]" src="./img/header_menu/icon_shopping_bag.png" alt="">
+                    <img class="h-[32px] w-[32px] 2xl:w-[24px] 2xl:h-[24px] hidden lg:block" src="./img/header_menu/icon_search.png" alt="">
+                    <img class="h-[32px] w-[32px] 2xl:w-[24px] 2xl:h-[24px] hidden lg:block" src="./img/header_menu/icon_box.png" alt="">
+                    <img class="h-[32px] w-[32px] 2xl:w-[24px] 2xl:h-[24px] hidden lg:block" src="./img/header_menu/icon_global.png" alt="">
+                </div>
+                <!-- language setting -->
+                <div class="relative group hidden lg:block">
+                    <div class="flex gap-2">
+                        <h4 class="text-[14px] text-[#737373]">ENG</h4>
+                        <img src="./img/header_menu/icon_arrow_down.png" alt="">
+                    </div>
+                    <ul class="absolute right-0 shadow-xl hidden group-hover:block z-10">
+                        <li class="py-[12px] pl-[15px] pr-[100px] bg-white hover:bg-[#A68E67] text-[#737373] hover:text-[#464646]">ENGLISH</li>
+                        <li class="py-[12px] pl-[15px] pr-[100px] bg-white hover:bg-[#A68E67] text-[#737373] hover:text-[#464646]">VIETNAMESE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- dropdown -->
+        <div class="hidden 2xl:block z-20">
+            <ul class="flex justify-between">
+                <!-- home -->
+                <li class="relative group py-[20px]">
+                    <a class="text-[#737373] hover:text-[#A18848]" href="#">HOMEPAGE</a>
+                    <div class="w-[50px] h-[1px] bg-[#A18848] absolute left-[calc(50%-25px)] hidden group-hover:block"></div>
+                </li>
+                <!-- gourment -->
+                <li class="relative group h-full py-[20px] ">
+                    <div class="flex gap-[4px]">
+                        <p  class="text-[#737373] hover:text-[#A18848]">GOURMENT CAKES, PASTRIES & BAKED ITEMS</p>
+                        <img src="./img/header_menu/icon_arrow_down.png" alt="">
+                    </div>
+                    <div class="w-[50px] h-[1px] bg-[#A18848] absolute left-[calc(50%-25px)] hidden group-hover:block"></div>
+                    <!-- gourment drop down -->
+                    <div class="bg-[#F9F5F0] absolute w-full hidden group-hover:block mt-[2px] z-10">
+                        <ul class="w-full mx-auto py-2 px-5">
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Monthly Specials</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Signature Cakes</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Bakeries</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Pastries</li>
+                            <li class="text-[18px] text-[#464646] py-2 text-center hover:text-[#A18848]">View all</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- restaurant -->
+                <li class="relative group py-[20px]">
+                    <div class="flex gap-[4px]">
+                        <p class="text-[#737373] hover:text-[#A18848]">RESTAURANT TAKEAWAYS & DELIVERY</p>
+                        <img src="./img/header_menu/icon_arrow_down.png" alt="">
+                    </div>
+                    <div class="w-[50px] h-[1px] bg-[#A18848] absolute left-[calc(50%-25px)] hidden group-hover:block"></div>
+                    <!-- restaurant drop down -->
+                    <div class="bg-[#F9F5F0] absolute w-full hidden group-hover:block mt-[2px] z-10">
+                        <ul class="w-full mx-auto py-2 px-5">
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Salads, Soups & Starters</li>
+                            <!-- main course in restaurant -->
+                            <li class="main_course relative">
+                                <p class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Main Courses</p>
+                                <!-- main course sub drop down -->
+                                <ul class="w-full mx-auto py-2 px-5 hidden main_course_ul absolute left-full top-0 bg-[#F9F5F0]">
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Poultry, Beef, Lamb & Pork</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Seafood</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Vegetarian</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Vietnamese cuisine</li>
+                                </ul>
+                            </li>
+                            <!-- burger in restaurant -->
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Burgers, Sandwiches & Light Meals</li>
+                            <!-- beverage in resaurant -->
+                            <li class="beverage relative">
+                                <p class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Metropole Beverages</p>
+                                <!-- beverage sub drop down -->
+                                <ul class="w-full mx-auto py-2 px-5 hidden beverage_ul absolute left-full top-0 bg-[#F9F5F0] z-10">
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Champagnes & Wines</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Beer Selection</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Cocktail Selection</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Non-Alcoholic Beverages</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Coffee & Tea</li>
+                                </ul>
+                            </li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Cheeses & Desserts</li>
+                            <li class="text-[18px] text-[#464646] py-2 text-center hover:text-[#A18848]">View all</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- premium -->
+                <li class="relative group py-[20px]">
+                    <div class="flex gap-[4px]">
+                        <p class="text-[#737373] hover:text-[#A18848]">PREMIUM MAKETPLACE</p>
+                        <img src="./img/header_menu/icon_arrow_down.png" alt="">
+                    </div>
+                    <div class="w-[50px] h-[1px] bg-[#A18848] absolute left-[calc(50%-25px)] hidden group-hover:block"></div>
+                    <!-- premium drop down -->
+                    <div class="bg-[#F9F5F0] absolute w-full hidden group-hover:block mt-[2px] z-10">
+                        <ul class="w-full mx-auto py-2 px-5">
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Butchery</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Seafood</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Dairy Products</li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Other luxury items</li>
+                            <li class="text-[18px] text-[#464646] py-2 text-center hover:text-[#A18848]">View all</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- branded -->
+                <li class="relative group py-[20px]">
+                    <div class="flex gap-[4px]">
+                        <p class="text-[#737373] hover:text-[#A18848]">BRANDED GIFTS & LIFESTYLE ITEMS</p>
+                        <img src="./img/header_menu/icon_arrow_down.png" alt="">
+                    </div>
+                    <div class="w-[50px] h-[1px] bg-[#A18848] absolute left-[calc(50%-25px)] hidden group-hover:block"></div>
+                    <!-- branded drop down -->
+                    <div class="bg-[#F9F5F0] absolute w-full hidden group-hover:block mt-[2px] z-10">
+                        <ul class="w-full mx-auto py-2 px-5">
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Metropole mascot</li>
+                            <!-- clothing of branded -->
+                            <li class="clothing relative">
+                                <p class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Clothing</p>
+                                <!-- clothing sub drop down -->
+                                <ul class="w-full mx-auto py-2 px-5 hidden clothing_ul absolute right-full top-0 bg-[#F9F5F0]">
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Basketball cap</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Blanket</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Polo shirt</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Scarf</li>
+                                </ul>
+                            </li>
+                            <!-- lifestyle of branded -->
+                            <li class="lifestyle relative">
+                                <p class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Lifestyle</p>
+                                <!-- lifestyle sub drop down -->
+                                <ul class="w-full mx-auto py-2 px-5 hidden lifestyle_ul absolute right-full top-0 bg-[#F9F5F0] z-10">
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Apron</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Tote bag</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Keychain</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Bookmark</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Postcard set</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Travel kit</li>
+                                </ul>
+                            </li>
+                            <!-- home decor of branded -->
+                            <li class="decor relative">
+                                <p class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Home decor</p>
+                                <!-- decor sub drop down -->
+                                <ul class="w-full mx-auto py-2 px-5 hidden decor_ul absolute right-full top-0 bg-[#F9F5F0] z-10" >
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Coffee mug</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Round lacquer coaster</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Lacquer box</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Tea urn</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Vase</li>
+                                    <li class="text-[16px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Paper weight</li>
+                                </ul>
+                            </li>
+                            <li class="text-[18px] text-[#464646] py-5 border-b border-[#E1E1E1] hover:text-[#A18848]">Gift vouchers</li>
+                            <li class="text-[18px] text-[#464646] py-2 text-center hover:text-[#A18848]">View all</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- head banner -->
+    <div class="bg-img relative">
+        <!-- left arrow -->
+        <div class="hidden 2xl:block absolute top-[calc(50%-20px)] left-20 opacity-50 hover:opacity-100">
+            <img class="z-0" src="./img/head_banner/arrow-left.png" alt="">
+        </div>
+        <!-- main content -->
+        <div class="w-[375px] w-[1024px] 2xl:w-[1400px] mx-auto lg:px-10 ">
+            <!-- text contetn -->
+            <div class=" flex justify-between px-[20px] lg:px-0">
+                <!-- left -->
+                <div class="pt-[97px] lg:pt-[56px] pb-[79px] lg:pb-[calc(56px+16px)] 2xl:pt-[178px] 2xl:pb-[calc(178px+16px+30px)] w-1/2">
+                    <h4 class="text-[18px] 2xl:text-[20px] text-[#FCFCFC] leading-[26px] mb-[24px]">Our Collection</h4>
+                    <h1 class="text-[#FCFCFC] text-[24px] lg:text-[36px] 2xl:text-[70px] leading-[130%] tracking-[1px] mb-[20px] lg:mb-[32px] w-[244px] lg:w-full">SPECIAL FLAVORS OF AUTUMN</h1>
+                    <p class="text-[14px] lg:text-[16px] text-[#FCFCFC] leading-[24px] mb-[28px] lg:mb-[56px] w-[300px] lg:w-[510px]">Our mission is to create a bakery that makes the best quality baked goods on site from scratch, and where both employees and customers would feel comfortable.</p>
+                    <!-- button -->
+                    <div class="flex gap-[16px]">
+                        <div>
+                            <a class="px-[31px] lg:px-[35px] 2xl:px-[65px] py-[10px] 2xl:py-[16px] bg-[#A18848] border border-[#A18848] text-[#FFFFFF] text-[14px] lg:text-[16px] leading-[20px]" href="#">EXPLORE</a>
+                        </div>
+                        <div>
+                            <a class="px-[31px] lg:px-[35px] 2xl:px-[65px] py-[10px] 2xl:py-[16px] border border-[#FCFCFC] text-[#FFFFFF] text-[14px] lg:text-[16px] leading-[20px]" href="#">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- slider dot -->
+                <div class="flex flex-col gap-y-[12px] my-auto">
+                    <img src="./img/head_banner/icon_dot_actived.png" alt="">
+                    <img src="./img/head_banner/icon_dot_inactive.png" alt="">
+                    <img src="./img/head_banner/icon_dot_inactive.png" alt="">
+                    <img src="./img/head_banner/icon_dot_inactive.png" alt="">
+                    <img src="./img/head_banner/icon_dot_inactive.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- right arrow -->
+        <div class="hidden 2xl:block absolute top-[calc(50%-20px)] right-20 opacity-50 hover:opacity-100">
+            <img src="./img/head_banner/arrow-right.png" alt="">
+        </div>
+        <!-- scroll down icon -->
+        <div class="hidden 2xl:block absolute left-[calc(50%-42px)] top-[721px]">
+            <img class="mx-auto mb-[12px] " src="./img/head_banner/icon_mouse.png" alt="">
+            <span class="text-[#F9F5F0] text-[14px] leading-[20px]">Scroll Down</span>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- signature_Pproduct -->
+    <div class="w-[375px] lg:w-[1024px] 2xl:w-[1400px] mx-auto pt-[32px] pb-[48px] lg:py-[100px]">
+        <!-- text -->
+        <div class="text-center pb-[28px] lg:pb-[24px] 2xl:pb-[60px]">
+            <h1 class="text-[20px] lg:text-[36px] text-[#2F2F2F] tracking-[4px] leading-[20px] lg:leading-[43px] mb-[16px] lg:mb-[24px]">
+                OUR SIGNATURE PRODUCT
+            </h1>
+            <p class="text-[14px] lg:text-[18px] text-[#737373] px-[15px] 2xl:px-[300px] leading-[24px] lg:leading-[27px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+            </p>
+        </div>
+        <!-- img -->
+        <div class="flex flex-col gap-y-[8px] lg:gap-y-[24px] px-[20px] lg:px-[15px] 2xl:px-0">
+            <div class="lg:flex justify-between">
+                <div class="relative group truncate mb-[8px] lg:mb-0">
+                    <img class="w-[335px] lg:w-[490px] 2xl:w-[687px] h-[188px] lg:h-[277px] 2xl:h-[387px] object-cover group-hover:scale-125 group-hover:opacity-80 ease-in-out duration-300" src="./img/signature_product/product_1.png" alt="">
+                    <div class="w-full h-full hover:bg-[#000]/[.5] hover:backdrop-blur-sm absolute top-0 flex items-center justify-center">
+                        <h3 class="uppercase text-[24px] 2xl:text-[28px] leading-[42px] text-white text-center">Gourmet cakes, <br> pastries & baked items </h3>
+                    </div>
+                    <!-- chua dua duoc text len gua -->
+                </div>
+                <div class="relative group truncate ">
+                    <img class="w-[335px] lg:w-[490px] 2xl:w-[687px] h-[188px] lg:h-[277px] 2xl:h-[387px] object-cover group-hover:scale-125 group-hover:opacity-80 ease-in-out duration-300" src="./img/signature_product/product_2.png" alt="">
+                    <div class="w-full h-full hover:bg-[#000]/[.5] hover:backdrop-blur-sm absolute top-0 flex items-center justify-center">
+                        <h3 class="uppercase text-[24px] 2xl:text-[28px] leading-[42px] text-white text-center">Restaurant takeaways <br> & delivery</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex justify-between">
+                <div class="relative group truncate ">
+                    <img class="w-[335px] lg:w-[322px] 2xl:w-[450px] h-[188px] lg:h-[182px] 2xl:h-[254px] object-cover group-hover:scale-125 group-hover:opacity-80 ease-in-out duration-300" src="./img/signature_product/product_3.png" alt="">
+                    <div class="w-full h-full hover:bg-[#000]/[.5] hover:backdrop-blur-sm absolute top-0 flex items-center justify-center">
+                        <h3 class="uppercase text-[24px] 2xl:text-[28px] leading-[42px] text-white text-center">Branded gifts & <br> lifestyle items</h3>
+                    </div>
+                </div>
+                <div class="relative group truncate my-[8px] lg:my-0">
+                    <img class="w-[335px] lg:w-[322px] 2xl:w-[450px] h-[188px] lg:h-[182px] 2xl:h-[254px] object-cover group-hover:scale-125 group-hover:opacity-80 ease-in-out duration-300" src="./img/signature_product/product_4.png" alt="">
+                    <div class="w-full h-full hover:bg-[#000]/[.5] hover:backdrop-blur-sm absolute top-0 flex items-center justify-center">
+                        <h3 class="uppercase text-[24px] 2xl:text-[28px] leading-[42px] text-white text-center">Branded gifts & <br> lifestyle items</h3>
+                    </div>
+                </div>
+                <div class="relative group truncate ">
+                    <img class="w-[335px] lg:w-[322px] 2xl:w-[450px] h-[188px] lg:h-[182px] 2xl:h-[254px] object-cover group-hover:scale-125 group-hover:opacity-80 ease-in-out duration-300" src="./img/signature_product/product_5.png" alt="">
+                    <div class="w-full h-full hover:bg-[#000]/[.5] hover:backdrop-blur-sm absolute top-0 flex items-center justify-center">
+                        <h3 class="uppercase text-[24px] 2xl:text-[28px] leading-[42px] text-white text-center">Special <br> promotions </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- food slider -->
+    <div class="py-[64px] bg-[#F9F5F0]">
+        <!-- slider img -->
+        <div class="flex justify-center gap-x-[32px]">
+            <div class="relative group w-[160px] lg:w-[154px] 2xl:w-[280px]">
+                <div class="relative">
+                    <img class="w-[160px] lg:w-[154px] 2xl:w-[280px] h-[125px] lg:h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_1.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Salads and Staters</p>
+            </div>
+            <div class="relative group w-[160px] lg:w-[154px] 2xl:w-[280px]">
+                <div class="relative">
+                    <img class="w-[160px] lg:w-[154px] 2xl:w-[280px] h-[125px] lg:h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_2.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Pasta</p>
+            </div>
+            <div class="relative group w-[154px] 2xl:w-[280px] hidden lg:block">
+                <div class="relative">
+                    <img class="w-[154px] 2xl:w-[280px] h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_3.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Meat and Fish</p>
+            </div>
+            <div class="relative group w-[154px] 2xl:w-[280px] hidden lg:block">
+                <div class="relative">
+                    <img class="w-[154px] 2xl:w-[280px] h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_4.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Vietnamese Dishes</p>
+            </div>
+            <div class="relative group w-[154px] 2xl:w-[280px] hidden lg:block">
+                <div class="relative">
+                    <img class="w-[154px] 2xl:w-[280px] h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_5.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Grilled and Roasted</p>
+            </div>
+            <div class="relative group w-[154px] 2xl:w-[280px] hidden lg:block">
+                <div class="relative">
+                    <img class="w-[154px] 2xl:w-[280px] h-[121px] 2xl:h-[220px] object-cover" src="./img/slider/img_slider_6.png" alt="">
+                    <div class="w-full h-full bg-black absolute opacity-40 hidden group-hover:block top-0 ease-in-out duration-300"></div>
+                </div>
+                <p class="text-center text-[20px] leading-[24px] text-[#2F2F2F] mt-[24px]">Cheese and Desserts</p>
+            </div>
+        </div>
+        <!-- slider control -->
+        <div class="flex justify-center gap-x-[36px] items-center  mt-[48px]">
+            <!-- left arrow -->
+            <div class="hidden lg:block">
+                <img src="./img/slider/icon_arrow_left.svg" alt="">
+            </div>
+            <!-- dots -->
+            <div class="flex gap-x-[8px]">
+                <img src="./img/slider/icon_slider_dot_avtived.svg" alt="">
+                <img src="./img/slider/icon_slider_dot_inavtived.svg" alt="">
+                <img src="./img/slider/icon_slider_dot_inavtived.svg" alt="">
+                <img src="./img/slider/icon_slider_dot_inavtived.svg" alt="">
+                <img src="./img/slider/icon_slider_dot_inavtived.svg" alt="">
+                <img src="./img/slider/icon_slider_dot_inavtived.svg" alt="">
+            </div>
+            <!-- right arrow -->
+            <div class="hidden lg:block">
+                <img src="./img/slider/icon_arrow_right.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- best selling -->
+    <div class="w-[375px] lg:w-[1024px] 2xl:w-[1400px] mx-auto py-[48px] lg:py-[64px] 2xl:py-[100px]">
+        <!-- text -->
+        <div class="text-center mb-[24px] lg:mb-[60px]">
+            <h2 class="text-[20px] lg:text-[36px] text-[#2F2F2F] leading-[20px] lg:leading-[43.2px] mb-[16px] lg:mb-[24px]">BEST SELLER PRODUCT</h2>
+            <p class="text-[14px] lg:text-[18px] text-[#2F2F2F] leading-[24px] lg:leading-[27px] mx-[15px] 2xl:mx-[300px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1950s</p>
+        </div>
+        <!-- image -->
+        <div class="flex flex-wrap justify-between gap-y-[48px] mb-[60px] mx-[15px] 2xl:mx-0">
+
+            <!-- card 1 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_1.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Sale</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">FRUIT-CUPCAKE</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">160.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">110.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_2.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Label</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">NAME</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">360.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">290.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_3.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Sale</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">CONCHAS</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">260.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">240.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_4.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Sale</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">CHOCOLATE CAKE SLICE</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">80.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">60.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_5.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Promotion</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">MOCHA TRES CAKE</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">140.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">120.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_6.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Promotion</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">MOCHA TRES CAKE</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">140.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">120.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 7 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_7.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Promotion</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">ALMOND CAKE</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">400.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">350.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card 8 -->
+            <div class="w-[160px] lg:w-[238px] 2xl:w-[332px] h-[193px] lg:h-[286px] 2xl:h-[400px]">
+                <!-- card img -->
+                <div class=" bg-[#FCFCFC] relative group">
+                    <div class="relative group">
+                        <img class="group-hover:opacity-80 ease-in-out duration-300" src="./img/best_sell/best_8.png" alt="">
+                        <span class="absolute px-[8px] lg:px-[12px] py-[4px] lg:py-[8px] text-[12px] lg:text-[16px] leading-[20px] bg-[#A68E67] text-white top-[20px] right-[24px] z-10 ease-in-out duration-300">Promotion</span>
+                        <span class="absolute py-[8px] lg:py-[13px] px-[60px] lg:px-[98px] bg-[#A18848] text-white top-[calc(50%-20px)] left-[calc(50%-85px)] lg:left-[calc(50%-126px)] z-10 hidden group-hover:block text-[12px] lg:text-[14px]">SELECT</span>
+                    </div>
+                    <div class="absolute w-full h-full top-0 bg-white opacity-60 hidden group-hover:block z-0"></div>
+                </div>
+                <!-- card-text -->
+                <div class="mt-[24px]">
+                    <h4 class="text-[14px] lg:text-[16px] text-[#464646] mb-[16px] tracking-[2px] font-semibold">CONCHAS</h4>
+                    <!-- price -->
+                    <div class="2xl:flex gap-[16px]">
+                        <span class="line-through block 2xl:inline-block text-[16px] lg:text-[20px] text-[#AEA598]">260.000 vnd</span>
+                        <span class="block 2xl:inline-block text-[16px] lg:text-[20px] text-[#A18848]">240.000 vnd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- button -->
+        <div class="text-center mt-[200px]">
+            <a class="text-[16px] leading-[20px] border border-[#2F2F2F] text-[#2F2F2F] inline-block px-[54px] py-[16px] " href="#">VIEW MORE</a>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- our blog -->
+    <div class="bg-[#F9F5F0] ">
+        <!-- content -->
+        <div class="py-[48px] 2xl:py-[80px] w-[375px] lg:w-[1024px] 2xl:w-[1400px] mx-auto">
+            <!-- text -->
+            <div class="text-center mb-[24px] lg:mb-[52px]">
+                <h1 class="text-[20px] lg:text-[36px] text-[#2F2F2F] tracking-[4px] leading-[20px] lg:leading-[43px] mb-[16px] lg:mb-[20px]">OUR BLOG</h1>
+                <p class="text-[18px] text-[#737373] leading-[27px] px-[20px] lg:px-[49px] 2xl:px-[300px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1950s</p>
+            </div>
+
+            <!-- card -->
+            <div class="lg:flex justify-between mb-[60px] mx-[20px] lg:mx-0">
+                <!-- card 1 -->
+                <div class="w-[335px] lg:w-[322px] 2xl:w-[451px] group">
+                    <!-- card img -->
+                    <div class="w-[335px] lg:w-[332px] 2xl:w-[451px] lg:h-[328px] 2xl:h-[460px] mb-[26px] 2xl:mb-[16px] relative group">
+                        <img src="./img/blog/blog_1.png" alt="">
+                        <div class="absolute w-full h-full bg-black opacity-40 hidden group-hover:block top-0"></div>
+                    </div>
+                    <!-- card text -->
+                    <div>
+                        <span class="text-[#737373] text-[14px] leading-[18px] mb-[16px]">18/07/2018</span>
+                        <h3 class="text-[#464646] text-[18px] leading-[27px] mb-[8px]">THE GREAT FOOD IS NOT JUST EATING FOR ENERGY</h3>
+                        <p class="text-[#737373] text-[16px] leading-[24px] mb-[20px]">One-hundred-twenty years after the Sofitel Legend Metropole Hanoi made its debut, the landmark hotel is introducing an exclusive.</p>
+                        <a class="text-[16px] leading-[21px] text-[#A18848]" href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- card 2 -->
+                <div class="w-[335px] lg:w-[322px] 2xl:w-[451px] group my-[32px] lg:my-0">
+                    <!-- card img -->
+                    <div class="w-[335px] lg:w-[332px] 2xl:w-[451px] lg:h-[328px] 2xl:h-[460px] mb-[26px] 2xl:mb-[16px] relative group">
+                        <img src="./img/blog/blog_2.png" alt="">
+                        <div class="absolute w-full h-full bg-black opacity-40 hidden group-hover:block top-0"></div>
+                    </div>
+                    <!-- card text -->
+                    <div>
+                        <span class="text-[#737373] text-[14px] leading-[18px] mb-[16px]">18/07/2018</span>
+                        <h3 class="text-[#464646] text-[18px] leading-[27px] mb-[8px]">THE GREAT FOOD IS NOT JUST EATING FOR ENERGY</h3>
+                        <p class="text-[#737373] text-[16px] leading-[24px] mb-[20px]">One-hundred-twenty years after the Sofitel Legend Metropole Hanoi made its debut, the landmark hotel is introducing an exclusive.</p>
+                        <a class="text-[16px] leading-[21px] text-[#A18848]" href="#">Learn more</a>
+                    </div>
+                </div>
+
+                <!-- card 3 -->
+                <div class="w-[335px] lg:w-[322px] 2xl:w-[451px] group">
+                    <!-- card img -->
+                    <div class="w-[335px] lg:w-[332px] 2xl:w-[451px] lg:h-[328px] 2xl:h-[460px] mb-[26px] 2xl:mb-[16px] relative group">
+                        <img src="./img/blog/blog_3.png" alt="">
+                        <div class="absolute w-full h-full bg-black opacity-40 hidden group-hover:block top-0"></div>
+                    </div>
+                    <!-- card text -->
+                    <div>
+                        <span class="text-[#737373] text-[14px] leading-[18px] mb-[16px]">18/07/2018</span>
+                        <h3 class="text-[#464646] text-[18px] leading-[27px] mb-[8px]">THE GREAT FOOD IS NOT JUST EATING FOR ENERGY</h3>
+                        <p class="text-[#737373] text-[16px] leading-[24px] mb-[20px]">One-hundred-twenty years after the Sofitel Legend Metropole Hanoi made its debut, the landmark hotel is introducing an exclusive.</p>
+                        <a class="text-[16px] leading-[21px] text-[#A18848]" href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- button -->
+            <div class="text-center">
+                <a class="text-[16px] leading-[20px] border border-[#2F2F2F] text-[#2F2F2F] inline-block px-[54px] py-[16px] " href="#">VIEW MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- cake img -->
+    <div class="pt-[64px] pb-[100px] 2xl:py-[100px] ">
+        <!-- img -->
+        <div class="flex justify-center">
+            <div class="relative group">
+                <img class="lg:w-[170px] 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_1.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+            <div class="relative group">
+                <img class="w-170px 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_2.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+            <div class="relative group hidden lg:block">
+                <img class="w-170px 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_3.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+            <div class="relative group hidden lg:block">
+                <img class="w-170px 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_4.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+            <div class="relative group hidden lg:block">
+                <img class="w-170px 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_5.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+            <div class="relative group hidden lg:block">
+                <img class="w-170px 2xl:w-[320px] h-[170px] 2xl:h-[320px] object-cover" src="./img/cake_img/cake_6.png" alt="">
+                <div class="w-full h-full bg-black opacity-40 absolute top-0 hidden group-hover:block group-hover:backdrop-blur"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================================================ -->
+    <!-- footer -->
+    <div class="pt-[52px] pb-[20px] border-t border-[#E1E1E1] bg-white">
+        <!-- logo -->
+        <div class="mb-[56px]">
+            <img class="mx-auto mb-[36px]" src="./img/footer/logo_legend.png" alt="">
+            <h3 class="text-center text-[16px] leading-[20px] text-[#171717] mb-[36px]">SOFITEL LEGEND METROPOLE HANOI - LUXURY HOTEL</h3>
+            <!-- line -->
+            <div class="w-[180px] h-[1px] bg-[#E1E1E1] mx-auto"></div>
+        </div>
+        <!-- input -->
+        <div class="mb-[56px]">
+            <h2 class="text-[24px] leading-[28px] text-[#171717] text-center mb-[24px]">NEWSLETTER</h2>
+            <div class="flex justify-center items-center ">
+                <input class=" outline-none py-[16px] border-b border-[#9D9D9D] w-[335px] lg:w-[390px] text-[#9D9D9D] text-[14px] leading-[18px] relative" type="text" placeholder="Enter your email address">
+                <a class=" text-[#171717] text-[13px] font-semibold leading-[18px] absolute transform translate-x-[130px] lg:translate-x-[155px]" href="#">SUBSCRIBE</a>
+            </div>
+        </div>
+        <!-- icon -->
+        <div class="flex justify-center gap-x-[68px] mb-[32px] lg:mb-[48px]">
+            <img src="./img/footer/icon_fb.png" alt=""> 
+            <img src="./img/footer/icon_twitter.png" alt=""> 
+            <img src="./img/footer/icon_yt.png" alt=""> 
+            <img src="./img/footer/icon_insta.png" alt=""> 
+        </div>
+        <!-- footer nav -->
+        <div class="flex flex-col lg:flex-row flex-wrap justify-center gap-y-[12px] lg:gap-y-[32px] gap-x-[71px] mb-[48px] px-[20px] lg:px-[100px] 2xl:px-0">
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Search</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Products</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">FAQ</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Delivery & PickUp</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Privacy Policy</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Terms of Service</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Ad & Cookie Policy</a>
+            <a class="text-[#171717] text-[14px] leading-[24px]" href="#">Contact us</a>
+        </div>
+        <!-- under line -->
+        <div class="w-full h-[1px] bg-[#E1E1E1] mb-[20px]"></div>
+        <!-- copyright -->
+        <div class="flex justify-center">
+            <span class="text-[14px] leading-[18px] ">Copyright © 2021 Sofitel Legend Metropole Ha Noi</span>
+        </div>
+    </div>
+</body>
+</html>

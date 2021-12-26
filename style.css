@@ -1,0 +1,30 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-img{
+    background-image: url(./img/head_banner/background.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.main_course:hover .main_course_ul{
+    display: block;
+}
+
+.beverage:hover .beverage_ul{
+    display: block;
+}
+
+.clothing:hover .clothing_ul{
+    display: block;
+}
+
+.lifestyle:hover .lifestyle_ul{
+    display: block;
+}
+
+.decor:hover .decor_ul{
+    display: block;
+}
